@@ -2,7 +2,9 @@ package br.com.rafael.entidade;
 
 import java.util.Date;
 
-public class Pessoa {
+import br.com.rafael.dao.Entidade;
+
+public class Pessoa extends Entidade<String> {
 	
 	private String nome;
 	private Date   dataNascimento;
