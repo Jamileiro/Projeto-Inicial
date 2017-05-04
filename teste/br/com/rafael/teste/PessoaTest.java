@@ -1,6 +1,7 @@
 package br.com.rafael.teste;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -26,8 +27,9 @@ public class PessoaTest extends TestCase {
 	@Test
 	
 	public void incluirPessoa() {
+		
 		Pessoa pessoa = new Pessoa();
-		pessoa.setId("1");
+		
 		pessoa.setCpf("123456789");
 		pessoa.setEmail("teste@teste.com.br");
 		pessoa.setEndereco("Av. Pasteur");
@@ -36,7 +38,6 @@ public class PessoaTest extends TestCase {
 
 		Pessoa pessoaGet = (Pessoa) daoPessoa.getObjeto(Pessoa.class, pessoa.getId());
 
-		assertEquals(pessoa.getId(), pessoaGet.getId());
 		assertEquals(pessoa.getCpf(), pessoaGet.getCpf());
 		assertEquals(pessoa.getEmail(), pessoaGet.getEmail());
 		assertEquals(pessoa.getEndereco(), pessoaGet.getEndereco());
@@ -48,7 +49,7 @@ public class PessoaTest extends TestCase {
 	public void alterarPessoa() {
 		
 		Pessoa pessoa = new Pessoa();
-		pessoa.setId("1");
+
 		pessoa.setCpf("123456789");
 		pessoa.setEmail("teste@teste.com.br");
 		pessoa.setEndereco("Av. Pasteur");
@@ -57,6 +58,7 @@ public class PessoaTest extends TestCase {
 		
 		Pessoa pessoaGet = (Pessoa) daoPessoa.getObjeto(Pessoa.class, pessoa.getId());
 		
+
 		pessoaGet.setCpf("12345678");
 		pessoaGet.setEmail("teste@teste.com");
 		pessoaGet.setEndereco("Av. Bela Vista");
@@ -70,5 +72,30 @@ public class PessoaTest extends TestCase {
 		assertEquals("Av. Bela Vista", alterarPessoa.getEndereco());
 		assertEquals("Jaqueline", alterarPessoa.getNome());
 		
+		}
+		
+	@Test
+	
+	public void excluirPessoa() {
+		
+		Pessoa pessoa = new Pessoa();
+
+		pessoa.setCpf("1010101010");
+		pessoa.setEmail("teste2@gmail.com.br");
+		pessoa.setEndereco("Garavalo");
+		pessoa.setNome("Manoel");
+		daoPessoa.salvarObjeto(pessoa);
+		
+		Pessoa pessoaGet = (Pessoa) daoPessoa.getObjeto(Pessoa.class, pessoa.getId());
+		
+		Assert.assertNotNull(pessoaGet);
+		
+		daoPessoa.excluiObjeto(pessoaGet);
+		
+		Pessoa excluirPessoa = (Pessoa) daoPessoa.getObjeto(Pessoa.class, pessoa.getId());
+		
+		assertNull (excluirPessoa);
+		
+		}
 	}
-}
+

@@ -45,5 +45,4 @@ public class Pessoa extends Entidade<String> {
 		this.cpf = cpf;
 	}
 	
-	
 }
