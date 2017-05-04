@@ -5,6 +5,7 @@ import java.util.Collection;
 
 public interface DAO {
 	
+	
 	<T extends Entidade<ID>, ID extends Serializable> void salvarObjeto(T objeto);
 
 	<T extends Entidade<ID>, ID extends Serializable> void atualizarObjeto(T objeto);

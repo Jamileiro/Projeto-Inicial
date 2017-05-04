@@ -35,6 +35,7 @@ public class PessoaDaoMock implements DAO {
 	public <T extends Entidade<ID>, ID extends Serializable> Collection<T> getObjetos(Class<T> tipoDaClasse) {
 		
 		return (Collection<T>) pessoas.values();
+		
 	}
 	
 }

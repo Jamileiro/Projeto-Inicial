@@ -26,6 +26,7 @@ public abstract class Entidade<ID extends Serializable> {
 	public void exclui() {
 		// TODO implementar quando tiver comunicação com banco usando
 		// hibernate
+		
 	}
 
 }

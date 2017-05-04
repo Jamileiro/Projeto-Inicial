@@ -10,7 +10,6 @@ import junit.framework.TestCase;
 
 public class PessoaTest extends TestCase {
 	
-	
 	protected DAO daoPessoa;
 	
 	@Before
