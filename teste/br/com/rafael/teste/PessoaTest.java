@@ -95,7 +95,35 @@ public class PessoaTest extends TestCase {
 		Pessoa excluirPessoa = (Pessoa) daoPessoa.getObjeto(Pessoa.class, pessoa.getId());
 		
 		assertNull (excluirPessoa);
+	}
+		
+	@Test
+	
+	public void naoDeveIncluirPessoaComTipoVazio(){
+		
+		try {
+			
+			Pessoa pessoa = new Pessoa();
+			pessoa.setNome("Rafael");
+			pessoa.setCpf("123456789");
+			daoPessoa.salvarObjeto(pessoa);
+			
+			}catch (IllegalArgumentException e) {
+				Assert.assertTrue(e.getMessage().matches("Não foi informado o tipo."));
+				
+			}
 		
 		}
+		
+	@Test (expected = IllegalArgumentException.class )
+	public void naoDeveIncluirPessoaComCpfVazio(){
+		Pessoa pessoa = new Pessoa();
+		pessoa.setCpf("123456789");
+		pessoa.setNome("Rafael");
+		daoPessoa.salvarObjeto(pessoa);
+		
 	}
+		
+	}
+
 
