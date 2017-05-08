@@ -15,5 +15,4 @@ public class Artesao extends Pessoa {
 		this.habilidades = habilidades;
 	}
 	
-	
 }
