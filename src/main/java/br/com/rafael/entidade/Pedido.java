@@ -1,19 +1,19 @@
 package br.com.rafael.entidade;
 
-import br.com.rafael.enumerado.STATUS;
+import br.com.rafael.enumerado.status;
 
 public class Pedido {
 
 	private Cliente cliente;
 	private Produto produto;
-	private STATUS status;
+	private status status;
 	
 
-	public STATUS getStatus() {
+	public status getStatus() {
 		return status;
 	}
 
-	public void setStatus(STATUS status) {
+	public void setStatus(status status) {
 		this.status = status;
 	}
 

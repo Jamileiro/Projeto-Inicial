@@ -1,5 +1,5 @@
 package br.com.rafael.enumerado;
 
-public enum HABILIDADE {
+public enum habilidade {
 	BOLONOPOTE, TAPETES, BOLOSDECORADOS, CHINELOS, DOCES;
 }

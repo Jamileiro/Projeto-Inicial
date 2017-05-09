@@ -1,6 +1,6 @@
 package br.com.rafael.enumerado;
 
-public enum STATUS {
+public enum status {
 
 	ABERTO, FINALIZADO, CANCELADO;
 	

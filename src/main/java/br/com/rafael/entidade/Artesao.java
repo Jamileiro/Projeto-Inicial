@@ -2,16 +2,16 @@ package br.com.rafael.entidade;
 
 import java.util.List;
 
-import br.com.rafael.enumerado.HABILIDADE;
+import br.com.rafael.enumerado.habilidade;
 
 public class Artesao extends Pessoa {
 	
-	private List<HABILIDADE> habilidades;
+	private List<habilidade> habilidades;
 	
-	public List<HABILIDADE> getHabilidades() {
+	public List<habilidade> getHabilidades() {
 		return habilidades;
 	}
-	public void setHabilidades(List<HABILIDADE> habilidades) {
+	public void setHabilidades(List<habilidade> habilidades) {
 		this.habilidades = habilidades;
 	}
 	
