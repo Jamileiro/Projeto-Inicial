@@ -6,7 +6,7 @@ import java.util.List;
 public class Produto {
 	
 	private String nomeProduto;
-	private Double valor;
+	private String valor;
 	private Date dataValidade;
 	private List<Compra> compras;
 	private Artesao artesao;
@@ -18,10 +18,10 @@ public class Produto {
 	public void setNomeProduto(String nomeProduto) {
 		this.nomeProduto = nomeProduto;
 	}
-	public Double getValor() {
+	public String getValor() {
 		return valor;
 	}
-	public void setValor(Double valor) {
+	public void setValor(String valor) {
 		this.valor = valor;
 	}
 	public Date getDataValidade() {
