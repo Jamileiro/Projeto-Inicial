@@ -1,6 +1,7 @@
 package br.com.rafael.teste;
 
 import java.util.Date;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,7 +37,7 @@ public class ProdutoTest extends TestCase {
 		produto.setValor("13.50");
 		produto.setDataValidade(new Date());
 		produto.setArtesao(new Artesao());
-		
+		daoProduto.salvarObjeto(produto);
 	}
 
 }
